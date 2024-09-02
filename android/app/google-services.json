@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1055795974148",
+    "project_id": "project-memorable",
+    "storage_bucket": "project-memorable.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055795974148:android:fddf7c76c10ad5a3cfa551",
+        "android_client_info": {
+          "package_name": "com.yeonrok.memorable"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBONSk4YlqZDqKhISKFPjbqrjYsygNnZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

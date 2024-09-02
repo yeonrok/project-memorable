@@ -1,0 +1,14 @@
+{
+    "delete": "削除",
+    "cancel": "キャンセル",
+    "userName": "お名前",
+    "enterUserName": "お名前を入力してください",
+    "skip": "スキップ",
+    "register": "登録",
+    "characterLimit": "{min}文字以上{max}文字以下で入力してください",
+    "userProfileImage": "プロフィール画像",
+    "uploadProfileImage": "写真を登録してください",
+    "userBday": "生年月日",
+    "enterUserBday": "生年月日",
+    "signInMsg": ""
+}
