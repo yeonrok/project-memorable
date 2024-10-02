@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart';
+import 'package:project_memorable/src/service/auth/backend/authenticator.dart';
 import 'package:project_memorable/src/service/theme_service.dart';
 import 'package:project_memorable/src/view/user/user_name_view.dart';
 import 'package:project_memorable/theme/component/button/button.dart';
 import 'package:project_memorable/theme/component/emoji_bubble.dart';
 import 'package:project_memorable/theme/res/palette.dart';
 import 'package:project_memorable/util/lang/generated/l10n.dart';
+import 'dart:developer' as devtools show log;
+
+extension Log on Object {
+  void log() => devtools.log(toString());
+}
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
@@ -107,7 +113,10 @@ class ButtonArea extends StatelessWidget {
             backgroundColor: const Color(0xff131314),
             //backgroundColor: const Color(0xffF2F2F2),
             //color: Colors.black,
-            onPressed: () {},
+            onPressed: () {
+              final result = Authenticator().loginWithGoogle();
+              result.log();
+            },
             text: '구글로 계속하기',
           ),
           const SizedBox(

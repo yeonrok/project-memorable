@@ -54,6 +54,7 @@ class DefaultFirebaseOptions {
     appId: '1:1055795974148:android:fddf7c76c10ad5a3cfa551',
     messagingSenderId: '1055795974148',
     projectId: 'project-memorable',
+    databaseURL: 'https://project-memorable-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'project-memorable.appspot.com',
   );
 
@@ -62,7 +63,9 @@ class DefaultFirebaseOptions {
     appId: '1:1055795974148:ios:59c20c568cb879e9cfa551',
     messagingSenderId: '1055795974148',
     projectId: 'project-memorable',
+    databaseURL: 'https://project-memorable-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'project-memorable.appspot.com',
+    iosClientId: '1055795974148-8ct8vk323ldmkdqhdlb45q51h12flmpp.apps.googleusercontent.com',
     iosBundleId: 'com.yeonrok.projectMemorable',
   );
 

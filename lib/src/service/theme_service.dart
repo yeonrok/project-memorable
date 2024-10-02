@@ -25,6 +25,8 @@ class ThemeService with ChangeNotifier {
   /// Material ThemeData 커스텀
   ThemeData get themeData {
     return ThemeData(
+      useMaterial3: false,
+
       /// Scaffold
       scaffoldBackgroundColor: theme.color.surface,
 

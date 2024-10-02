@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_memorable/src/service/theme_service.dart';
+import 'package:project_memorable/src/view/album/main_view.dart';
 import 'package:project_memorable/theme/component/button/button.dart';
 import 'package:project_memorable/theme/component/input_field.dart';
 import 'package:project_memorable/util/lang/generated/l10n.dart';
@@ -30,7 +31,14 @@ class UserBirthView extends StatelessWidget {
             child: Button(
               text: S.current.skip,
               type: ButtonType.flat,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MainView(),
+                  ),
+                );
+              },
             ),
           ),
         ],

@@ -1,24 +1,33 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart';
+import 'package:project_memorable/firebase_options.dart';
 import 'package:project_memorable/src/service/lang_service.dart';
 import 'package:project_memorable/src/service/theme_service.dart';
+import 'package:project_memorable/src/view/album/main_view.dart';
 import 'package:project_memorable/src/view/landing/landing_view.dart';
-import 'package:project_memorable/src/view/signup/sign_up_view.dart';
-import 'package:project_memorable/src/view/user/user_birth_view.dart';
 import 'package:project_memorable/src/view/user/user_name_view.dart';
-import 'package:project_memorable/src/view/user/user_profile_view.dart';
-import 'package:project_memorable/theme/res/palette.dart';
 import 'package:project_memorable/util/lang/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   // runApp() 호출 전 Flutter SDK 초기화
   KakaoSdk.init(
     nativeAppKey: 'e916a4b1a8556021d424497c72a0e2b2',
   );
+
+  // runApp(
+  //   const ProviderScope(
+  //     child: MyApp(),
+  //   ),
+  // );
 
   runApp(
     MultiProvider(
@@ -41,6 +50,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations(
+      [
+        DeviceOrientation.portraitUp,
+        DeviceOrientation.portraitDown,
+      ],
+    );
     return MaterialApp(
       localizationsDelegates: const [
         S.delegate,
